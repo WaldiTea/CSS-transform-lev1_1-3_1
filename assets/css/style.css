@@ -1,0 +1,147 @@
+h3 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+body {
+  margin: 0;
+}
+
+/*----------lev1_1----------*/
+/*##########################*/
+
+.container {
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cube-wrapper {
+  width: 100%;
+  height: 100%;
+  border-right: 2px solid lightgreen;
+  display: flex;
+  justify-content: center;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  border-radius: 0.75rem;
+  margin-top: 50px;
+  transition: all 0.5s linear;
+}
+
+.cube:hover {
+  width: 150px;
+  height: 150px;
+  margin-top: 200px;
+  transform: rotate(90deg);
+}
+
+/*----------lev1_2----------*/
+/*##########################*/
+
+.cube-container {
+  width: 40%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4.5rem;
+}
+
+.wuerfel {
+  width: 150px;
+  height: 150px;
+  border-radius: 0.75rem;
+  background: lightgreen;
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s;
+}
+
+.translate:hover {
+  transform: translate(3rem, 3rem);
+}
+
+.translateX:hover {
+  transform: translateX(-3rem);
+}
+
+.translateY:hover {
+  transform: translateY(3rem);
+}
+
+.rotate:hover {
+  transform: rotate(45deg);
+}
+
+.scale:hover {
+  transform: scale(1.5);
+}
+
+.skew:hover {
+  transform: skew(20deg, 10deg);
+}
+
+/*----------lev3_1----------*/
+/*##########################*/
+
+.card-wrapper {
+  background: #333;
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  perspective: 600px;
+  position: relative;
+}
+
+.card {
+  width: 800px;
+  height: 300px;
+  border-radius: 1rem;
+  margin: 0 auto;
+  font-size: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  place-items: center;
+  transform: rotateY(-15deg) skew(-5deg) translateX(-50%);
+  opacity: 0.9;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: rotateY(-10deg) skew(-5deg) translateX(-50%);
+  z-index: 3;
+}
+
+.card-blue {
+  background: lightblue;
+  top: 1%;
+  left: 50%;
+  z-index: 3;
+}
+
+.card-coral {
+  background: lightcoral;
+  left: 50%;
+  z-index: 2;
+}
+
+.card-pink {
+  background: lightpink;
+  bottom: 1%;
+  left: 50%;
+  z-index: 1;
+}
+
+.card-text {
+  font-size: 3rem;
+}
